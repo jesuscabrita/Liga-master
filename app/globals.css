@@ -1,0 +1,199 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+}
+
+.line {
+  fill: none;
+  stroke: #f9f8f8;
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+.linedark {
+  fill: none;
+  stroke: #1F2937;
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.linedark1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.linedark2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+
+.linedark3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.openedark .linedark1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+.openedark .linedark2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+
+.openedark .linedark3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+.vivo {
+  border: 2px solid white;
+  animation-duration: 1.8s;
+  animation-name: fade;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fade {
+  0% {
+      border-color: #cc4746;
+  }
+
+  20% {
+      border-color: #cc4746;
+  }
+
+  50% {
+      border-color: #cc4746;
+  }
+
+  70% {
+      border-color: white;
+  }
+
+  100% {
+      border-color: #cc4746;
+  }
+}
+
+.colored-toast.swal2-icon-success {
+  background-color: #318275 !important;
+  color: #f9f8f8 !important;
+}
+
+.colored-toast.swal2-icon-error {
+  background-color: #b74848 !important;
+  color: #f9f8f8 !important;
+}
+
+.custom-swal-container {
+  z-index: 10000 !important;
+}
+
+:root {
+  --cero: #f9f8f8;
+  --dark: #343c41;
+  --dark2: #1F2937;
+  --dark2hover: rgb(60, 70, 84);
+  --dark3: #515558;
+  --dark4: rgb(43, 52, 67);
+  --dark5: #121924;
+  --primario: #256d85;
+  --primario2: #31738964;
+  --danger: #b74848;
+  --danger2: #c0606068;
+  --check: #38ab59;
+  --gris: #cdd2d4;
+  --gris2: rgb(130, 132, 132);
+  --gris3: #bcc2c4;
+  --gris4: #aab4be;
+  --warnning: #ecbf5d;
+  --warnning2: #e8df686b;
+  --neutral: #8ca9a2;
+  --marcaRed: #ED1C24;
+  --light:#ececec;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cero: #f9f8f8;
+    --dark: #343c41;
+    --dark2: #1F2937;
+    --dark2hover: rgb(60, 70, 84);
+    --dark3: #515558;
+    --dark4: rgb(43, 52, 67);
+    --dark5: #121924;
+    --primario: #256d85;
+    --primario2: #31738964;
+    --danger: #b74848;
+    --danger2: #c0606068;
+    --check: #38ab59;
+    --gris: #cdd2d4;
+    --gris2: rgb(130, 132, 132);
+    --gris3: #bcc2c4;
+    --gris4: #aab4be;
+    --warnning: #ecbf5d;
+    --warnning2: #e8df686b;
+    --neutral: #8ca9a2;
+    --marcaRed: #ED1C24;
+    --light:#ececec;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
