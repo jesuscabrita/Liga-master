@@ -47,8 +47,8 @@ export const InfoPartido = ({ homeTeam, awayTeam, currentRound, isLoading }: { h
     }, [isLoading]);
 
     return (
-        <Paper elevation={3} sx={{ padding: "20px", display: "flex", flexDirection: "column", alignItems: "center", background: light ? 'var(--gris)' : 'var(--dark2)',  }}>
-            <Grid item container sx={{ color: light ? 'var(--dark2)' : 'var(--gris2)', width:  "350px" }}>
+        <Paper elevation={4} sx={{ padding: mobile ? '15px 0px 15px 0px' : "20px", display: "flex", flexDirection: "column", alignItems: "center", background: light ? 'var(--gris)' : 'var(--dark2)' }}>
+            <Grid item container sx={{ color: light ? 'var(--dark2)' : 'var(--gris2)', minWidth: '360px' }}>
                 <Grid item container alignItems={'center'} justifyContent={'center'}>
                     Jornada {currentRound + 1}
                 </Grid>
@@ -62,7 +62,7 @@ export const InfoPartido = ({ homeTeam, awayTeam, currentRound, isLoading }: { h
                             (<CircularProgress style={{ color: light ? 'var(--dark2)' : 'var(--cero)' }} size={20} />)
                             : showImage ? <img style={{ height: '60px' }} src={homeTeam?.logo} alt={homeTeam?.name} />
                                 : null}
-                        <Grid item sx={{ fontSize: '14px', whiteSpace: 'nowrap', color: light ? 'var(--dark2)' : 'var(--gris)' }}>{homeTeam?.name}</Grid>
+                        <Grid item sx={{ fontSize: mobile ? '10px' : '14px', whiteSpace: 'nowrap', color: light ? 'var(--dark2)' : 'var(--gris)' }}>{homeTeam?.name}</Grid>
                     </Grid>
                     <Grid item >
                         <ButtonStatus status={status(hoy, fechaFinalPartido, tiempoRestante, TIEMPO_PARTIDO)} gol_away={gol_away} gol_home={gol_home} minutosTranscurridos={minutosTranscurridos} />
@@ -74,7 +74,7 @@ export const InfoPartido = ({ homeTeam, awayTeam, currentRound, isLoading }: { h
                             (<CircularProgress style={{ color: light ? 'var(--dark2)' : 'var(--cero)' }} size={20} />)
                             : showImage ? <img style={{ height: '60px' }} src={awayTeam?.logo} alt={awayTeam?.name} />
                                 : null}
-                        <Grid item sx={{ fontSize: '14px', whiteSpace: 'nowrap', color: light ? 'var(--dark2)' : 'var(--gris)' }}>{awayTeam?.name}</Grid>
+                        <Grid item sx={{ fontSize: mobile ? '10px' : '14px', whiteSpace: 'nowrap', color: light ? 'var(--dark2)' : 'var(--gris)' }}>{awayTeam?.name}</Grid>
                     </Grid>
                 </Grid>
             </Grid>

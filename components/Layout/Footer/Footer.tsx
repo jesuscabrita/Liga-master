@@ -46,11 +46,11 @@ export const Footer = () => {
     return (
         <footer id='contactos' style={{ background: 'var(--dark2)', color: '#fff', paddingTop: '40px' }}>
             <Container maxWidth="lg">
-                <Grid container sx={{ justifyContent: 'center' }}>
-                    <Grid item xs={10} sm={6} md={3} mb={4}>
+                <Grid container justifyContent={'center'} alignItems={'center'}>
+                    <Grid item container justifyContent={'center'} alignItems={'center'} xs={10} sm={6} md={3} mb={4}>
                         <img src={'/images/logoDark1.png'} alt="Liga master" style={{ height: mobile ? '120px' : '180px' }} />
                     </Grid>
-                    <Grid item xs={10} sm={6} md={3} mb={4}>
+                    <Grid item container justifyContent={'center'} alignItems={!mobile ? 'initial' : 'center'} flexDirection={'column'} xs={10} sm={6} md={3} mb={4}>
                         <h2 style={{ letterSpacing: '2px' }}>Enlaces Rápidos</h2>
                         <Link href={'/'} className="cursor-pointer">
                             <Grid item style={buttonStyles}>
@@ -73,7 +73,7 @@ export const Footer = () => {
                             </Grid>
                         </Link>
                     </Grid>
-                    <Grid item xs={10} sm={6} md={3} mb={4}>
+                    <Grid item container justifyContent={'center'} alignItems={!mobile ? 'initial' : 'center'} flexDirection={'column'} xs={10} sm={6} md={3} mb={4}>
                         <h2 style={{ letterSpacing: '2px' }}>Contacto</h2>
                         <Grid item mb={1} mt={2} sx={{ fontSize: mobile ? '12px' : '14px', opacity: 0.7, cursor: 'pointer' }} onClick={handleCorreoClick}>
                             <strong>Email:</strong> jesusarnaldo115@gmail.com
