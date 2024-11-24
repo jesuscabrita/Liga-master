@@ -96,11 +96,11 @@ export const Footer = () => {
                 </div>
             </Container>
             <div className="bg-gray-700 py-4 flex flex-col items-center">
-                <p className="text-xs text-gray-300">© 2024 LIGA MASTER. TODOS LOS DERECHOS RESERVADOS.</p>
+                <p className="text-xs text-gray-300" style={{ fontSize: '11px' }}>© 2024 LIGA MASTER. TODOS LOS DERECHOS RESERVADOS.</p>
                 <a href="https://goatdata.com.ar/" target="_blank" rel="noopener noreferrer" className="mt-2 flex items-center">
                     <span className="text-xs text-gray-300 underline">Diseñado y desarrollado por</span>
                     <img src={'/images/logos08.png'} alt="Goat Data Logo" className="h-2.5 mx-1" />
-                    <span className="text-xs text-gray-300">DATA</span>
+                    <span className="text-xs text-gray-300" style={{ fontSize: '11px',marginTop:'0.5px' }}>DATA</span>
                 </a>
             </div>
         </footer>

@@ -70,18 +70,18 @@ export const TablePosiciones: React.FC<TablePosicionesProps> = ({ data, titleTab
                                                                 <Grid sx={{ background: 'var(--warnning)', height: '35px', width: '10px', whiteSpace: 'nowrap' }}></Grid>}
                                                             <Grid>{index + 1}</Grid>
                                                         </Grid>
-                                                        <Grid item sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '55px', height: '35px', cursor: 'pointer' }} onClick={() => { router.push(`/manager/${row._id}`) }}>
+                                                        <Grid item sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: mobile ? '35px' : '55px', height: '30px', cursor: 'pointer' }} onClick={() => { router.push(`/manager/${row._id}`) }}>
                                                             {isLoading || !showImage ?
                                                                 (<CircularProgress style={{ color: light ? 'var(--dark2)' : 'var(--cero)' }} size={20} />)
-                                                                : showImage ? <img src={row.logo} alt={row.name} style={{ height: '35px' }} />
+                                                                : showImage ? <img src={row.logo} alt={row.name} style={{ height: mobile ? '20px' : '35px' }} />
                                                                     : null}
                                                         </Grid>
-                                                        <Grid item sx={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap', width: !mobile ? '140px' : '150px', cursor: 'pointer', letterSpacing: '2px', fontSize: mobile ? '11px' : '14px', fontWeight: '500' }} onClick={() => { router.push(`/manager/${row._id}`) }}>
+                                                        <Grid item sx={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap', width: !mobile ? '140px' : '150px', cursor: 'pointer', letterSpacing: mobile ? '1px' : '2px', fontSize: mobile ? '10px' : '14px', fontWeight: '500' }} onClick={() => { router.push(`/manager/${row._id}`) }}>
                                                             {row.name}
                                                             {row.partidosJugados >= 1 &&
-                                                            <Grid item ml={1} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', whiteSpace: 'nowrap', width: '30px' }}>
-                                                                <ArrowP light={light} currentPos={index} prevPos={row.puntaje_anterior} />
-                                                            </Grid>}
+                                                                <Grid item sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', whiteSpace: 'nowrap', width: '30px' }}>
+                                                                    <ArrowP light={light} currentPos={index} prevPos={row.puntaje_anterior} />
+                                                                </Grid>}
                                                         </Grid>
                                                     </Grid>
                                                 </StyledTableCell>
